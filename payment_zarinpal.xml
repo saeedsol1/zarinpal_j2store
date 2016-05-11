@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="j2store" method="upgrade">
+    <name>Zarinpal Payment</name>
+    <version>1.0</version>
+    <creationDate>2016</creationDate>
+    <author>mohsen ranjbar</author>
+    <authorEmail>mimrahe@gmail.com</authorEmail>
+    <authorUrl>http://zarinpal.com</authorUrl>
+    <copyright>2016 J2Store . All rights reserved. </copyright>
+    <license>GNU General Public License v2 or later</license>
+    <description>J2STORE_ZARINPAL_PLUGINDESC</description>
+    <scriptfile>script.payment_zarinpal.php</scriptfile>
+    <files>
+        <filename plugin="payment_zarinpal">payment_zarinpal.php</filename>
+        <filename>payment_zarinpal.xml</filename>
+        <filename>index.html</filename>
+        <folder>payment_zarinpal</folder>
+    </files>
+
+    <languages folder="language/fa-IR">
+        <language tag="fa-IR">fa-IR.plg_j2store_payment_zarinpal.ini</language>
+        <language tag="fa-IR">fa-IR.plg_j2store_payment_zarinpal.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="display_name" type="text" size="30" default="" label="j2store_plugin_display_name" description="j2store_plugin_display_name_desc"/>
+                <field name="merchant_id" type="text" size="30" default="" lable="J2STORE_ZARINPAL_MERCHANT_CODE_LABEL" description="J2STORE_ZARINPAL_MERCHANT_CODE_DESC" />
+                <field name="payment_status" type="list" default="1" label="J2STORE_ZARINPAL_PAYMENT_STATUS_LABEL" description="J2STORE_ZARINPAL_PAYMENT_STATUS_DESC">
+                    <option value="1">J2STORE_CONFIRMED</option>
+                    <option value="4">J2STORE_PENDING</option>
+                    <option value="3">J2STORE_FAILED</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
